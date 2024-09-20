@@ -1,5 +1,5 @@
 #pragma once
-//qr_header.h
+//QRproject.h
 #ifndef HEADER_H
 #define HEADER_H
 
@@ -21,6 +21,7 @@ using namespace cv;
 using namespace std;
 using namespace chrono;
 
+void putSizeText(Mat& img, double area);
 void initializeDatabase(sql::Connection*& con, sql::mysql::MySQL_Driver*& driver);
 void detectAndDisplayContours(Mat& frame, Mat& gray, Mat& binary, vector<Point>& detectedObjects);
 void detectQRCode(Mat& frame, QRCodeDetector& detector, set<string>& detectedQRs, set<string>& printedQRs, sql::Connection* con, sql::PreparedStatement*& pstmt);
